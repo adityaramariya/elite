@@ -1,0 +1,276 @@
+
+// variables defination for cards scss
+
+$white_color:#fff;
+$black_color: #000;
+$card_light_gray_color: #666;
+$card_primary_color: #196baa;
+
+$card_border_color: #E5E5E5;
+$card_border_radius: 2px;
+$card_padding: 16px 24px 24px 24px;
+$card_align_content: top;
+$card_default_space: 20px;
+$card_font_family: Helvetica, 'Arial', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'sans-serif';
+$no_border: none;
+
+//card width
+
+$card_half_width: 50%;
+$card_full_width: 95%;
+$card_large_width: 450px;
+$card_normal_width: 300px;
+$card_small_width: 200px;
+
+$card_child_width: 190px;
+$card_child_height: 130px;
+
+
+// card height
+
+$card_large_height: 200px;
+$card_medium_height: 150px;
+$card_small_height: 200px;
+
+
+// typography
+
+$card_title_font_size: 16px;
+$card_title_font_size_small: 14px;
+$card_title_font_size_large: 20px;
+$card_title_font_weight: 600;
+$card_font_weight_normal: normal;
+$card_title_font_weight_bold: bold;
+$card_body_color: #333333;
+
+$disabled_link_color: #B2D5E3;
+
+
+
+// spacing
+$padding_0: 0;
+
+
+//components
+  // buttons
+$card_btn_default_color: #2288af;
+// tables
+
+$card_table_border_color: #c8c8c8;
+$card_table_border_default: 1px solid $card_table_border_color;
+$card_table_cells_min_width:90px;
+$card_table_cells_max_width:115px;
+$event_table_cells_width: 200px;
+
+
+
+
+.card--on24 {
+  //display: inline-table;
+  display: inline-block;
+  font-family: $card_font_family;
+  background: $white_color;
+  border: 1px solid $card_border_color;
+  border-radius: $card_border_radius;
+  padding: $card_padding;
+  width: fit-content;
+  box-shadow: none;
+  vertical-align: $card_align_content;
+
+  /* For multiple combined cards */
+
+  &.first-card,&.middle-card, &.last-card
+  {
+    min-width: $card_child_width;
+    width: $card_child_width;
+    min-height: $card_child_height;
+    height: $card_child_height;
+  }
+
+
+  &.first-card{
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    margin-right: -1px;
+  }
+  &.middle-card {
+    margin-left: 0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-right: -1px;
+  }
+  &.last-card {
+    margin-left: 0;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* To separate multiples contents or card, use this margins */
+
+  &.margin-left, .margin-left
+  {
+    margin-left: $card_default_space;
+  }
+
+  &.margin-right, .margin-right
+  {
+    margin-right: $card_default_space;
+  }
+
+  &.margin-bottom, .margin-bottom
+  {
+    margin-bottom: $card_default_space;
+  }
+
+  &.margin-top, .margin-top
+  {
+    margin-top: $card_default_space;
+  }
+
+  &.width-middle-screen
+  {
+    width: $card_half_width;
+  }
+
+  /* Title inside cards */
+
+  .title--on24 {
+    //display: table-header-group;
+    display: block;
+    font-size: $card_title_font_size;
+    height: $card_title_font_size;
+    font-weight: $card_title_font_weight;
+    color: $card_body_color;
+    padding: 0;
+  }
+
+  .title-capitalized--on24 {
+    text-transform: capitalize;
+  }
+
+  /* Content of cards */
+
+  .content--on24 {
+    padding-top: 16px;
+    display: table-cell;
+    vertical-align: top;
+    &.align-center {
+      vertical-align: middle;
+      text-align: center;
+      .rdChartCanvas {
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+
+  //LABELS
+
+  .label-large--on24, .label-normal--on24
+  {
+    font-weight: normal;
+    color: $card_body_color;
+    margin-top: 2px;
+  }
+
+
+  // Large Labels
+  .label-large--on24,
+  .label-large--on24 sup {
+    font-size: $card_title_font_size*2;
+    vertical-align: inherit;
+  }
+
+
+  // Normal Labels
+  .label-normal--on24 {
+    font-size: 14px;
+  }
+
+  // Link inside cards
+  /* Default Links / Combined with label classes */
+  a
+  {
+    text-decoration: none;
+    .label-medium--on24, .label-normal--on24, .label-small--on24
+    {
+      color: $card_btn_default_color; /* From .btn-link */
+    }
+
+    .link-no-color
+    {
+      color: $card_body_color;
+    }
+  }
+
+
+  /* For multiple contents in one single card*/
+
+  .group {
+    display: inline-block;
+  }
+}
+
+
+
+// Event Summy Table
+
+
+#event-summary-table {
+  border-collapse: collapse;
+  width: 100%;
+  td {
+    padding-bottom: 12px;
+    width: $event_table_cells_width;
+    span {
+      font-size: $card_title_font_size_small;
+      color: $card_light_gray_color;
+    }
+  }
+}
+
+
+/* Sort icon style, When no icon in the new UI */
+
+
+
+/* Widths for Cards and Height for Contents */
+/* Widths of cards */
+.group.width-full,
+.card--on24.width-full {
+  width: $card_full_width;
+}
+.card--on24.width-large {
+  min-width: $card_large_width;
+  width: $card_large_width;
+}
+.card--on24.width-normal {
+  min-width: $card_normal_width;
+  width: $card_normal_width;
+}
+.group.width-small,
+.card--on24.width-small {
+  min-width: $card_small_width;
+  width: $card_small_width;
+}
+/* Heights of cards */
+.content.height-high--on24 {
+  min-height: $card_large_height;
+  height: $card_large_height;
+}
+.content.height-medium--on24 {
+  min-height: $card_medium_height;
+  height: $card_medium_height;
+  max-height: $card_medium_height;
+}
+
+
+
+
+
+
+
+

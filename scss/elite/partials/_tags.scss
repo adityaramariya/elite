@@ -1,0 +1,128 @@
+$white_color:#fff;
+$font_size_base: 14px;
+$tags_inner_padding: 4px 4px 4px 8px;
+$tags_outer_space: 10px;
+$gray_light: #ddd;
+
+%centeredBox
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag--wrapper
+{
+  display: flex;
+}
+
+.tag:not(body) {
+  @extend %centeredBox;
+  font-family: Helvetica;
+  background-color: $primary-color;
+  white-space: nowrap;
+  padding: $tags_inner_padding;
+  border-radius: 0;
+  color: $white_color;
+  font-size: $font_size_base;
+  text-transform: capitalize;
+  margin-right: $tags_outer_space;
+
+  &.is-tagged
+  {
+    padding-right: 8px;
+  }
+
+  &.is--default
+  {
+    background-color: $gray_light;
+  }
+}
+
+.tag:not(body) .delete {
+  margin-left: 4px;
+}
+
+.delete{
+  font-family: Helvetica;
+  background: transparent;
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 18px;
+  max-height: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  min-width: 18px;
+  width: 18px;
+  outline: 0;
+  position: relative;
+  vertical-align: top;
+  &:before{
+    height: 1px;
+    width: 65%;
+  }
+  &:after{
+    height: 65%;
+    width: 1px;
+  }
+  &:before, &:after{
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+}
+
+
+.btn-orange
+{
+  position: relative;
+  padding: 3px 4px;
+  color: #fff;
+  background-color: $primary-color;
+  border-radius: 0;
+  width: 26px;
+  height: 26px;
+
+  &:before,
+  &:after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: transform 0.25s ease-out;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  /* Vertical line */
+  &:before{
+
+    width: 2px;
+    height: 50%;
+  }
+
+  /* horizontal line */
+  &:after{
+    width: 50%;
+    height: 2px;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+}
