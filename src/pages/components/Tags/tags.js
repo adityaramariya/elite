@@ -9,12 +9,9 @@ class Tags extends Component {
                         Tag label
                     <button className="delete is-small"></button>
                 </span>
-
-
                 <span className="tag is-tagged">
                         Tag label
                 </span>
-
 
                 <span className="tag is--default">
                         Default Tags
