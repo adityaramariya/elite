@@ -10,7 +10,7 @@ class Card extends Component {
                         </div>
                         <div id="card-content" className="content--on24">
                             <div id="content-value">
-                                <a href="#" id="openAttendeesReport">
+                                <a  href="# " id="openAttendeesReport">
                                 <span
                                     id="lblEngagementScore"
                                     className="label-large--on24">1.2
@@ -19,7 +19,7 @@ class Card extends Component {
                             </div>
 
                             <div id="content-subtitle">
-                                <a href="#" id="openAttendeesReport">
+                                <a  href="# " id="openAttendeesReport">
                                 <span id="lblTitleEngagementScore"
                                       className="label-normal--on24 btn-link">Engagement Score
                                 </span>
@@ -31,12 +31,13 @@ class Card extends Component {
                     <div id="card-TotalRegistrants" className="card--on24 middle-card">
                         <div id="card-title" className="title--on24"></div>
                         <div id="card-content" className="content--on24">
-                            <div id="content-value"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=registrants&amp;attendance-viewing-selector_b0288dc96613433eacfc0d23b75e93f1=all_viewers&amp;moreReport_b0288dc96613433eacfc0d23b75e93f1=audience-table&amp;reportType_b0288dc96613433eacfc0d23b75e93f1=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                id="openRegistrantsReport"><span id="lblRegCount" className="label-large--on24">64</span></a>
+                            <div id="content-value">
+                                <a
+                                    href="# "
+                                    id="openRegistrantsReport"><span id="lblRegCount" className="label-large--on24">64</span></a>
                             </div>
                             <div id="content-subtitle"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=registrants&amp;attendance-viewing-selector_b0288dc96613433eacfc0d23b75e93f1=all_viewers&amp;moreReport_b0288dc96613433eacfc0d23b75e93f1=audience-table&amp;reportType_b0288dc96613433eacfc0d23b75e93f1=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
+                                href="# "
                                 id="openRegistrantsReport"><span id="lblTitleRegCount" className="label-normal--on24 btn-link">Total Registrants</span></a>
                             </div>
                         </div>
@@ -45,12 +46,13 @@ class Card extends Component {
                         <div id="card-title" className="title--on24"></div>
                         <div id="card-content" className="content--on24">
                             <div id="content-value"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=all_attendees&amp;attendance-viewing-selector_906d8d482e1e4b13917b6b938c73b3ba=all_viewers&amp;moreReport_906d8d482e1e4b13917b6b938c73b3ba=audience-table&amp;reportType_906d8d482e1e4b13917b6b938c73b3ba=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
+                                href="# "
                                 id="openAttendeesReport"><span id="lblAttendeeCount"
                                                                className="label-large--on24">8</span></a></div>
                             <div id="content-subtitle"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=all_attendees&amp;attendance-viewing-selector_906d8d482e1e4b13917b6b938c73b3ba=all_viewers&amp;moreReport_906d8d482e1e4b13917b6b938c73b3ba=audience-table&amp;reportType_906d8d482e1e4b13917b6b938c73b3ba=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                id="openAttendeesReport"><span id="lblTitleAttendeeCount"
+                                href="# "
+                                id="openAttendeesReport">
+                                <span id="lblTitleAttendeeCount"
                                                                className="label-normal--on24 btn-link">Total Attendees</span></a>
                             </div>
                             <div id="percentage-attendees-container">
@@ -80,11 +82,11 @@ class Card extends Component {
                         <div id="card-title" className="title--on24"></div>
                         <div id="card-content" className="content--on24">
                             <div id="content-value"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=all_attendees&amp;reportType_5a490df7f23342f1a027d373d1f07f33=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
+                                href="# "
                                 id="openAttendeesReport"><span id="lblAttendanceRatio" className="label-large--on24">13<span
                                 className="percent-superscript" id="yui_3_1_1546929235523_431">%</span></span></a></div>
                             <div id="content-subtitle"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=all_attendees&amp;reportType_5a490df7f23342f1a027d373d1f07f33=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
+                                href="# "
                                 id="openAttendeesReport"><span id="lblTitleAttendanceRatio"
                                                                className="label-normal--on24 btn-link">Attendee Conversion Rate</span></a>
                             </div>
@@ -96,11 +98,11 @@ class Card extends Component {
                         <div id="card-title" className="title--on24"></div>
                         <div id="card-content" className="content--on24">
                             <div id="content-value"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=registrants&amp;reportType_0726e678bc934395ace5172099b2c0fc=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
+                                href="# "
                                 id="openRegistrantsReport"><span id="lblRegRate" className="label-large--on24">50<span
                                 className="percent-superscript" id="yui_3_1_1546929235523_428">%</span></span></a></div>
                             <div id="content-subtitle"><a
-                                href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=registrants&amp;reportType_0726e678bc934395ace5172099b2c0fc=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
+                                href="# "
                                 id="openRegistrantsReport"><span id="lblTitleRegRate" className="label-normal--on24 btn-link">Reg Page Conversion Rate</span></a>
                             </div>
                             <div id="lblRegCaption" className="label-normal--on24">Registration vs. Registration Page Hits

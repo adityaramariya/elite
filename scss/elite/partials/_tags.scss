@@ -1,5 +1,5 @@
 $white_color:#fff;
-$font_size_base: 14px;
+//$font_size_base: 14px;
 $tags_inner_padding: 4px 4px 4px 8px;
 $tags_outer_space: 10px;
 $gray_light: #ddd;
@@ -19,7 +19,8 @@ $gray_light: #ddd;
 .tag:not(body) {
   @extend %centeredBox;
   font-family: Helvetica;
-  background-color: $primary-color;
+  //background-color: $primary-color;
+  background-color: $normal-color-darken;
   white-space: nowrap;
   padding: $tags_inner_padding;
   border-radius: 0;

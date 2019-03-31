@@ -2,11 +2,11 @@
   border-radius: $tbl-border-radius;
   border-spacing: $tbl-border-spacing;
   font-size: $font-size-body;
-  font-family: $font-global;
+  //font-family: $font-global;
   color: $black;
   min-width: 100%;
-  margin-left: $tbl-side-padding;
-  margin-right: $tbl-side-padding;
+  //margin-left: $tbl-side-padding;
+  //margin-right: $tbl-side-padding;
   /*min-width: 550px !important;*/
 
   thead tr {
@@ -64,4 +64,3 @@
     background: $tbl-summary-background-color;
   }
 }
-

@@ -5,7 +5,7 @@ class SearchBox extends Component {
     render() {
         return (
             <div className="search-box">
-                <i className="far fa-search icon"></i>
+                <span class="icon-search icon"></span>
                 <input type="search" className="form-control" placeholder="Placeholder Text"/>
             </div>
         );

@@ -9,8 +9,8 @@ render() {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h4 className="modal-title">Pop Up title</h4>
-                            <a className="close-btn" href="#" data-dismiss="modal" aria-label="Close">
-                                {/*<span className="icon-close"></span>*/}
+                            <a className="close-btn"  href="# " data-dismiss="modal" aria-label="Close">
+                                <span class="icon-Close"></span>
                             </a>
                         </div>
                         <div className="modal-body">
@@ -23,7 +23,6 @@ render() {
                     </div>
                 </div>
             </div>
-
         );
     }
 }

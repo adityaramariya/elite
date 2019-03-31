@@ -25,6 +25,21 @@
 }
 
 
+.icon-arrow_left:before {
+  content: "\e903";
+}
+.icon-arrow_right:before {
+  content: "\e904";
+}
+.icon-search:before {
+  content: "\e905";
+}
+
+.icon-Close:before {
+  content: "\e900";
+}
+
+
 
 .icon-expand .path1:before {
   content: "\e901";

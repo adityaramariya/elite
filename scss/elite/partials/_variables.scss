@@ -76,7 +76,6 @@ $tbl-summary-inner-border-color: #999999;
 
 
 
-
 // variables added by me
 
 // global color shades
@@ -123,12 +122,12 @@ $gray-dark: #333;
 // Grayscale and brand colors for use across Bootstrap.
 
 // Start with assigning color names to specific hex values.
-$white:  #fff !default;
-$black:  #000 !default;
-$red:    #d9534f !default;
-$orange: #f0ad4e !default;
+$white:  #fff    !default;
+$black:  #000    !default;
+$red:    #cc0000 !default;
+$orange: #8a6d3b !default;
 $yellow: #ffd500 !default;
-$green:  #5cb85c !default;
+$green:  #7DBE42 !default;
 $blue:   #0275d8 !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
@@ -137,7 +136,7 @@ $purple: #613d7c !default;
 // Create grayscale
 $gray-dark:                 #292b2c !default;
 $gray:                      #464a4c !default;
-$gray-light:                #636c72 !default;
+$gray-light:                #999 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
@@ -276,13 +275,13 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif !default;
+$font-family-sans-serif: "Helvetica Neue", Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-helvetica : "Helvetica Neue", sans-serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 0.875rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 0.85rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
@@ -293,8 +292,8 @@ $font-weight-bold: bold !default;
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
-$font-size-h1: 2.5rem !default;
-$font-size-h2: 2rem !default;
+$font-size-h1: 3.5rem !default;
+$font-size-h2: 2.5rem !default;
 $font-size-h3: 1.75rem !default;
 $font-size-h4: 1.5rem !default;
 $font-size-h5: 1.25rem !default;
@@ -363,6 +362,9 @@ $caret-width:            4px !default;
 $transition-base:        all .2s ease-in-out !default;
 $transition-fade:        opacity .15s linear !default;
 $transition-collapse:    height .35s ease !default;
+
+
+
 
 
 // Buttons
@@ -456,6 +458,23 @@ $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-pa
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
 $input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
+
+$form-text-margin-top:     .25rem !default;
+$form-feedback-margin-top: $form-text-margin-top !default;
+
+$form-check-margin-bottom:  .5rem !default;
+$form-check-input-gutter:   1.25rem !default;
+$form-check-input-margin-y: .25rem !default;
+$form-check-input-margin-x: .25rem !default;
+
+$form-check-inline-margin-x: .75rem !default;
+
+$form-group-margin-bottom:       $spacer-y !default;
+
+$input-group-addon-bg:           $gray-lighter !default;
+$input-group-addon-border-color: $input-border-color !default;
+
+
 
 $cursor-disabled:                not-allowed !default;
 
@@ -603,18 +622,6 @@ $state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // dropdowns
 
 $dropdown-menu-min-width: 120px;
@@ -624,26 +631,3 @@ $dropdown-link-hover-bg : #E5F0FB;
 $dropdown-link-padding: 8px;
 
 
-// Dropdown menu container and contents.
-
-//$dropdown-min-width:             10rem !default;
-//$dropdown-padding-y:             .5rem !default;
-//$dropdown-margin-top:            .125rem !default;
-//$dropdown-bg:                    $white !default;
-//$dropdown-border-color:          rgba($black,.15) !default;
-//$dropdown-border-width:          $border-width !default;
-//$dropdown-divider-bg:            $gray-lighter !default;
-//$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
-//
-//$dropdown-link-color:            $gray-dark !default;
-//$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
-//$dropdown-link-hover-bg:         $gray-lightest !default;
-//
-//$dropdown-link-active-color:     $component-active-color !default;
-//$dropdown-link-active-bg:        $component-active-bg !default;
-//
-//$dropdown-link-disabled-color:   $gray-light !default;
-//
-//$dropdown-item-padding-x:        1.5rem !default;
-//
-//$dropdown-header-color:          $gray-light !default;

@@ -6,6 +6,7 @@ import Tags from './pages/components/Tags/tags';
 import Modal from './pages/components/Modal/modal';
 import Pagination from './pages/components/Pagination/pagination';
 import SearchBox from './pages/components/search';
+import All from './pages/components/ui-components';
 class EliteRoute extends Component {
 
   render() {
@@ -17,11 +18,9 @@ class EliteRoute extends Component {
         <Route exact path="/modal" component={Modal} />
         <Route exact path="/pagination" component={Pagination} />
         <Route exact path="/search" component={SearchBox} />
+        <Route exact path="/all-components" component={All} />
       </Switch>
     );
   }
-
-
-
 }
 export default EliteRoute;
