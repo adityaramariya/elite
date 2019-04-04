@@ -17,6 +17,7 @@ $gray_light: #ddd;
 }
 
 .tag:not(body) {
+  display: inline-block;
   @extend %centeredBox;
   font-family: Helvetica;
   //background-color: $primary-color;
