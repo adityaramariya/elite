@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SearchBox from './search';
 class Dropdown extends Component {
     render() {
-
         return (
             <div className="inner-page--wrapper">
                 <div className="dropdown--wrapper">
