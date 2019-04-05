@@ -29,7 +29,6 @@ class Tags extends Component {
                 <button className="btn btn-orange"></button>
 
 
-
             </div>
 
 
