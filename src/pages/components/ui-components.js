@@ -118,13 +118,6 @@ class All extends Component {
                         </div>
                     </div>
 
-                    <div className="row--flex 2--column">
-                        <div className="flex-item col-sm withBg">
-                            <div className="sectionTitle">
-                                Charts
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         );

@@ -27,11 +27,7 @@ class Tags extends Component {
                 </span>
 
                 <button className="btn btn-orange"></button>
-
-
             </div>
-
-
 
         );
     }

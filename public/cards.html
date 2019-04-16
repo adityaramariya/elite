@@ -2,205 +2,129 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <!--
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>ON24 Elite</title>
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.4/react-bootstrap.js"></script> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>ON24 Elite Cards</title>
 
 </head>
 
 <body>
-  
-  <div id="root" class="pageWrapper">
-  <div class="inner-page--wrapper page-content">
-  
-                  <div id="table-header">
-                      <div id="dashboard-title" class="main-title">
-                          <span class="registrants-title"
-                                id="yui_3_1_1546942530200_453">MY DASHBOARD</span>
-                      </div>
-                  </div>
-                  <div class="card--wrapper">
-                      <div class="card first-card">
-                          <div id="card-title" class="title">
-                              <span id="yui_3_1_1546927546619_514">Summary</span>
-                          </div>
-                          <div id="card-content" class="content">
-                              <div id="content-value">
-                                  <a href="#" id="openAttendeesReport">
-                                  <span
-                                      id="lblEngagementScore"
-                                      class="label-large">1.2
-                                  </span>
-                                  </a>
-                              </div>
-  
-                              <div id="content-subtitle">
-                                  <a href="#" id="openAttendeesReport">
-                                  <span id="lblTitleEngagementScore"
-                                        class="label-normal btn-link">Engagement Score
-                                  </span>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <div id="card-TotalRegistrants" class="card middle-card">
-                          <div id="card-title" class="title"></div>
-                          <div id="card-content" class="content">
-                              <div id="content-value"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=registrants&amp;attendance-viewing-selector_b0288dc96613433eacfc0d23b75e93f1=all_viewers&amp;moreReport_b0288dc96613433eacfc0d23b75e93f1=audience-table&amp;reportType_b0288dc96613433eacfc0d23b75e93f1=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openRegistrantsReport"><span id="lblRegCount" class="label-large">64</span></a>
-                              </div>
-                              <div id="content-subtitle"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=registrants&amp;attendance-viewing-selector_b0288dc96613433eacfc0d23b75e93f1=all_viewers&amp;moreReport_b0288dc96613433eacfc0d23b75e93f1=audience-table&amp;reportType_b0288dc96613433eacfc0d23b75e93f1=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openRegistrantsReport"><span id="lblTitleRegCount" class="label-normal btn-link">Total Registrants</span></a>
-                              </div>
-                          </div>
-                      </div>
-                      <div id="card-TotalAttendees" class="card middle-card">
-                          <div id="card-title" class="title"></div>
-                          <div id="card-content" class="content">
-                              <div id="content-value"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=all_attendees&amp;attendance-viewing-selector_906d8d482e1e4b13917b6b938c73b3ba=all_viewers&amp;moreReport_906d8d482e1e4b13917b6b938c73b3ba=audience-table&amp;reportType_906d8d482e1e4b13917b6b938c73b3ba=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openAttendeesReport"><span id="lblAttendeeCount"
-                                                                 class="label-large">8</span></a></div>
-                              <div id="content-subtitle"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;attendance-viewing-selector=all_viewers&amp;moreReport=audience-table&amp;reportType=all_attendees&amp;attendance-viewing-selector_906d8d482e1e4b13917b6b938c73b3ba=all_viewers&amp;moreReport_906d8d482e1e4b13917b6b938c73b3ba=audience-table&amp;reportType_906d8d482e1e4b13917b6b938c73b3ba=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openAttendeesReport"><span id="lblTitleAttendeeCount"
-                                                                 class="label-normal btn-link">Total Attendees</span></a>
-                              </div>
-                              <div id="percentage-attendees-container">
-                                  <table class="width-full" id="percentage-attendees">
-                                      <tbody id="yui_3_1_1546929235523_449">
-                                      <tr id="percentage-attendees-th">
-                                          <td id="percentage-attendees-live-title"><span
-                                              class="label-normal">Live</span></td>
-                                          <td id="percentage-attendees-od-title"><span
-                                              class="label-normal">On-Demand</span></td>
-                                      </tr>
-                                      <tr id="percentage-attendees-tr">
-                                          <td id="percentage-attendees-live-value">
-                                              <div class="label-normal" id="yui_3_1_1546929235523_479"><b>1</b> (13%)
-                                              </div>
-                                          </td>
-                                          <td id="percentage-attendees-od-value">
-                                              <div class="label-normal"><b>7</b> (87%)</div>
-                                          </td>
-                                      </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
-                      </div>
-                      <div id="card-AttConversionRate" class="card middle-card">
-                          <div id="card-title" class="title"></div>
-                          <div id="card-content" class="content">
-                              <div id="content-value"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=all_attendees&amp;reportType_5a490df7f23342f1a027d373d1f07f33=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openAttendeesReport"><span id="lblAttendanceRatio" class="label-large">13<span
-                                  class="percent-superscript" id="yui_3_1_1546929235523_431">%</span></span></a></div>
-                              <div id="content-subtitle"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=all_attendees&amp;reportType_5a490df7f23342f1a027d373d1f07f33=all_attendees&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openAttendeesReport"><span id="lblTitleAttendanceRatio"
-                                                                 class="label-normal btn-link">Attendee Conversion Rate</span></a>
-                              </div>
-                              <div id="lblAttRegRate" class="label-normal">Attendees vs. Registrants</div>
-                          </div>
-                      </div>
-  
-                      <div id="card-RegConversionRate" class="card last-card">
-                          <div id="card-title" class="title"></div>
-                          <div id="card-content" class="content">
-                              <div id="content-value"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=registrants&amp;reportType_0726e678bc934395ace5172099b2c0fc=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openRegistrantsReport"><span id="lblRegRate" class="label-large">50<span
-                                  class="percent-superscript" id="yui_3_1_1546929235523_428">%</span></span></a></div>
-                              <div id="content-subtitle"><a
-                                  href="javascript:SubmitForm('rdPage.aspx?rdReport=Audience&amp;reportType=registrants&amp;reportType_0726e678bc934395ace5172099b2c0fc=registrants&amp;rdRequestForwarding=Form','_self','false','',null,['','',''])"
-                                  id="openRegistrantsReport"><span id="lblTitleRegRate" class="label-normal btn-link">Reg Page Conversion Rate</span></a>
-                              </div>
-                              <div id="lblRegCaption" class="label-normal">Registration vs. Registration Page Hits
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="card--wrapper">
-                      <div id="card-EventSummary" class="card width-large height-high margin-right margin-top">
-                          <div id="card-title" class="title"><span id="yui_3_1_1546929235523_493">Event Summary</span>
-                          </div>
-                          <div id="event-summary-container" class="content">
-                              <table id="event-summary-table">
-                                  <tbody id="yui_3_1_1546929235523_456">
-                                  <tr id="event-summary-tr-1">
-                                      <td class="event-summary-cell" id="event-summary-cell-1"><span
-                                          id="lblEventDuration">Event Duration: 63 min</span></td>
-                                      <td class="event-summary-cell" id="event-summary-cell-2"><span
-                                          id="lblQuestionsAsked">Questions Asked: 0</span></td>
-                                  </tr>
-                                  <tr id="event-summary-tr-2">
-                                      <td class="event-summary-cell" id="event-summary-cell-3"><span
-                                          id="lblAvgLiveDuration">Avg. Live Duration: 29 min</span></td>
-                                      <td class="event-summary-cell" id="event-summary-cell-4"><span
-                                          id="lblNumPollResponses"># of Poll Responses: 0</span></td>
-                                  </tr>
-                                  <tr id="event-summary-tr-3">
-                                      <td class="event-summary-cell" id="event-summary-cell-5"><span
-                                          id="lblAvgODDuration">Avg. On-Demand: 14 min</span></td>
-                                      <td class="event-summary-cell" id="event-summary-cell-6"><span
-                                          id="lblNumSurveyResponses"># of Survey Responses: 0</span></td>
-                                  </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
-  
-  
-                      <div id="card-EventSummary" class="card width-large height-high margin-right margin-top">
-                          <div id="card-title" class="title"><span id="yui_3_1_1546929235523_493">Event Summary</span>
-                          </div>
-                          <div id="event-summary-container" class="content">
-                              <table id="event-summary-table">
-                                  <tbody id="yui_3_1_1546929235523_456">
-                                  <tr id="event-summary-tr-1">
-                                      <td class="event-summary-cell" id="event-summary-cell-1"><span
-                                          id="lblEventDuration">Event Duration: 63 min</span></td>
-                                      <td class="event-summary-cell" id="event-summary-cell-2"><span
-                                          id="lblQuestionsAsked">Questions Asked: 0</span></td>
-                                  </tr>
-                                  <tr id="event-summary-tr-2">
-                                      <td class="event-summary-cell" id="event-summary-cell-3"><span
-                                          id="lblAvgLiveDuration">Avg. Live Duration: 29 min</span></td>
-                                      <td class="event-summary-cell" id="event-summary-cell-4"><span
-                                          id="lblNumPollResponses"># of Poll Responses: 0</span></td>
-                                  </tr>
-                                  <tr id="event-summary-tr-3">
-                                      <td class="event-summary-cell" id="event-summary-cell-5"><span
-                                          id="lblAvgODDuration">Avg. On-Demand: 14 min</span></td>
-                                      <td class="event-summary-cell" id="event-summary-cell-6"><span
-                                          id="lblNumSurveyResponses"># of Survey Responses: 0</span></td>
-                                  </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
+    <div id="root" class="pageWrapper">
+        <div class="inner-page--wrapper page-content">
+            <div class="card--wrapper">
+                <div class="card--on24 first-card">
+                    <div id="card-title" class="title--on24">
+                        <span id="yui_3_1_1546927546619_514">Summary</span>
+                    </div>
+                    <div id="card-content" class="content--on24">
+                        <div id="content-value">
+                            <a href="# " id="openAttendeesReport"><span id="lblEngagementScore" class="label-large--on24">1.2</span></a></div>
+                        <div id="content-subtitle"><a href="# " id="openAttendeesReport"><span id="lblTitleEngagementScore" class="label-normal--on24 btn-link">Engagement Score</span></a></div>
+                    </div>
+                </div>
+                <div id="card-TotalRegistrants" class="card--on24 middle-card">
+                    <div id="card-title" class="title--on24"></div>
+                    <div id="card-content" class="content--on24">
+                        <div id="content-value"><a href="# " id="openRegistrantsReport"><span id="lblRegCount" class="label-large--on24">64</span></a></div>
+                        <div id="content-subtitle"><a href="# " id="openRegistrantsReport"><span id="lblTitleRegCount" class="label-normal--on24 btn-link">Total Registrants</span></a></div>
+                    </div>
+                </div>
+                <div id="card-TotalAttendees" class="card--on24 middle-card">
+                    <div id="card-title" class="title--on24"></div>
+                    <div id="card-content" class="content--on24">
+                        <div id="content-value"><a href="# " id="openAttendeesReport"><span id="lblAttendeeCount" class="label-large--on24">8</span></a></div>
+                        <div id="content-subtitle"><a href="# " id="openAttendeesReport"><span id="lblTitleAttendeeCount" class="label-normal--on24 btn-link">Total Attendees</span></a></div>
+                        <div id="percentage-attendees-container">
+                            <table class="width-full" id="percentage-attendees">
+                                <tbody id="yui_3_1_1546929235523_449">
+                                    <tr id="percentage-attendees-th">
+                                        <td id="percentage-attendees-live-title"><span class="label-normal--on24">Live</span></td>
+                                        <td id="percentage-attendees-od-title"><span class="label-normal--on24">On-Demand</span></td>
+                                    </tr>
+                                    <tr id="percentage-attendees-tr">
+                                        <td id="percentage-attendees-live-value">
+                                            <div class="label-normal--on24" id="yui_3_1_1546929235523_479"><b>1</b> (13%)</div>
+                                        </td>
+                                        <td id="percentage-attendees-od-value">
+                                            <div class="label-normal--on24"><b>7</b> (87%)</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-AttConversionRate" class="card--on24 middle-card">
+                    <div id="card-title" class="title--on24"></div>
+                    <div id="card-content" class="content--on24">
+                        <div id="content-value"><a href="# " id="openAttendeesReport"><span id="lblAttendanceRatio" class="label-large--on24">13<span class="percent-superscript" id="yui_3_1_1546929235523_431">%</span></span></a></div>
+                        <div id="content-subtitle"><a href="# " id="openAttendeesReport"><span id="lblTitleAttendanceRatio" class="label-normal--on24 btn-link">Attendee Conversion Rate</span></a></div>
+                        <div id="lblAttRegRate" class="label-normal--on24">Attendees vs. Registrants</div>
+                    </div>
+                </div>
+                <div id="card-RegConversionRate" class="card--on24 last-card">
+                    <div id="card-title" class="title--on24"></div>
+                    <div id="card-content" class="content--on24">
+                        <div id="content-value"><a href="# " id="openRegistrantsReport"><span id="lblRegRate" class="label-large--on24">50<span class="percent-superscript" id="yui_3_1_1546929235523_428">%</span></span></a></div>
+                        <div id="content-subtitle"><a href="# " id="openRegistrantsReport"><span id="lblTitleRegRate" class="label-normal--on24 btn-link">Reg Page Conversion Rate</span></a></div>
+                        <div id="lblRegCaption" class="label-normal--on24">Registration vs. Registration Page Hits</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card--wrapper">
+                <div id="card-EventSummary" class="card--on24 width-large height-high--on24 margin-right margin-top">
+                    <div id="card-title" class="title--on24"><span id="yui_3_1_1546929235523_493">Event Summary</span></div>
+                    <div id="event-summary-container" class="content--on24">
+                        <table id="event-summary-table">
+                            <tbody id="yui_3_1_1546929235523_456">
+                                <tr id="event-summary-tr-1">
+                                    <td class="event-summary-cell" id="event-summary-cell-1"><span id="lblEventDuration">Event Duration: 63 min</span></td>
+                                    <td class="event-summary-cell" id="event-summary-cell-2"><span id="lblQuestionsAsked">Questions Asked: 0</span></td>
+                                </tr>
+                                <tr id="event-summary-tr-2">
+                                    <td class="event-summary-cell" id="event-summary-cell-3"><span id="lblAvgLiveDuration">Avg. Live Duration: 29 min</span></td>
+                                    <td class="event-summary-cell" id="event-summary-cell-4"><span id="lblNumPollResponses"># of Poll Responses: 0</span></td>
+                                </tr>
+                                <tr id="event-summary-tr-3">
+                                    <td class="event-summary-cell" id="event-summary-cell-5"><span id="lblAvgODDuration">Avg. On-Demand: 14 min</span></td>
+                                    <td class="event-summary-cell" id="event-summary-cell-6"><span id="lblNumSurveyResponses"># of Survey Responses: 0</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="card-EventSummary" class="card--on24 width-large height-high--on24 margin-right margin-top">
+                    <div id="card-title" class="title--on24"><span id="yui_3_1_1546929235523_493">Event Summary</span></div>
+                    <div id="event-summary-container" class="content--on24">
+                        <table id="event-summary-table">
+                            <tbody id="yui_3_1_1546929235523_456">
+                                <tr id="event-summary-tr-1">
+                                    <td class="event-summary-cell" id="event-summary-cell-1"><span id="lblEventDuration">Event Duration: 63 min</span></td>
+                                    <td class="event-summary-cell" id="event-summary-cell-2"><span id="lblQuestionsAsked">Questions Asked: 0</span></td>
+                                </tr>
+                                <tr id="event-summary-tr-2">
+                                    <td class="event-summary-cell" id="event-summary-cell-3"><span id="lblAvgLiveDuration">Avg. Live Duration: 29 min</span></td>
+                                    <td class="event-summary-cell" id="event-summary-cell-4"><span id="lblNumPollResponses"># of Poll Responses: 0</span></td>
+                                </tr>
+                                <tr id="event-summary-tr-3">
+                                    <td class="event-summary-cell" id="event-summary-cell-5"><span id="lblAvgODDuration">Avg. On-Demand: 14 min</span></td>
+                                    <td class="event-summary-cell" id="event-summary-cell-6"><span id="lblNumSurveyResponses"># of Survey Responses: 0</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
- 
 </body>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 
 </html>
