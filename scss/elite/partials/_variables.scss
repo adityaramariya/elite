@@ -98,16 +98,6 @@ $gray-dark: #333;
 	}
 }
 
-@function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-
-	@return $string;
-}
-
 @mixin _assert-starts-at-zero($map) {
 	$values: map-values($map);
 	$first-value: nth($values, 1);
@@ -119,19 +109,19 @@ $gray-dark: #333;
 
 // Colors
 //
-// Grayscale and brand colors for use across Bootstrap.
+// Grayscale and brand colors for use across Theme.
 
 // Start with assigning color names to specific hex values.
 $white:  #fff    !default;
 $black:  #000    !default;
 $red:    #cc0000 !default;
 $orange: #8a6d3b !default;
-$yellow: #ffd500 !default;
+//$yellow: #ffd500 !default;
 $green:  #7DBE42 !default;
 $blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
-$purple: #613d7c !default;
+//$teal:   #5bc0de !default;
+//$pink:   #ff5b77 !default;
+//$purple: #613d7c !default;
 
 // Create grayscale
 $gray-dark:                 #292b2c !default;
@@ -144,7 +134,6 @@ $gray-lightest:             #f7f7f9 !default;
 
 $brand-primary:             $blue !default;
 $brand-success:             $green !default;
-$brand-info:                $teal !default;
 $brand-warning:             $orange !default;
 $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
@@ -159,54 +148,20 @@ $enable-shadows:            true !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
 
 
 // Spacing
 //
-// Control the default styling of most Bootstrap elements by modifying these
+// Control the default styling of most of elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
-$spacers: (
-				0: (
-								x: 0,
-								y: 0
-				),
-				1: (
-								x: ($spacer-x * .25),
-								y: ($spacer-y * .25)
-				),
-				2: (
-								x: ($spacer-x * .5),
-								y: ($spacer-y * .5)
-				),
-				3: (
-								x: $spacer-x,
-								y: $spacer-y
-				),
-				4: (
-								x: ($spacer-x * 1.5),
-								y: ($spacer-y * 1.5)
-				),
-				5: (
-								x: ($spacer-x * 3),
-								y: ($spacer-y * 3)
-				)
-) !default;
+
 $border-width: 1px !default;
 
-// This variable affects the `.h-*` and `.w-*` classes.
-$sizes: (
-				25: 25%,
-				50: 50%,
-				75: 75%,
-				100: 100%
-) !default;
 
 // Body
 //
@@ -214,8 +169,6 @@ $sizes: (
 
 $body-bg:       $white !default;
 $body-color:    $gray-dark !default;
-$inverse-bg:    $gray-dark !default;
-$inverse-color: $gray-lighter !default;
 
 
 // Links
@@ -276,9 +229,7 @@ $grid-gutter-widths: (
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif: "Helvetica Neue", Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-helvetica : "Helvetica Neue", sans-serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
 $font-size-base: 0.85rem !default; // Assumes the browser default, typically `16px`
@@ -292,55 +243,7 @@ $font-weight-bold: bold !default;
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
-$font-size-h1: 3.5rem !default;
-$font-size-h2: 2.5rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
-$font-size-h6: 1rem !default;
 
-$headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   inherit !default;
-$headings-font-weight:   500 !default;
-$headings-line-height:   1.1 !default;
-$headings-color:         inherit !default;
-
-$display1-size: 6rem !default;
-$display2-size: 5.5rem !default;
-$display3-size: 4.5rem !default;
-$display4-size: 3.5rem !default;
-
-$display1-weight:     300 !default;
-$display2-weight:     300 !default;
-$display3-weight:     300 !default;
-$display4-weight:     300 !default;
-$display-line-height: $headings-line-height !default;
-
-$lead-font-size:   1.25rem !default;
-$lead-font-weight: 300 !default;
-
-$small-font-size: 80% !default;
-
-$text-muted: $gray-light !default;
-
-$abbr-border-color: $gray-light !default;
-
-$blockquote-small-color:  $gray-light !default;
-$blockquote-font-size:    ($font-size-base * 1.25) !default;
-$blockquote-border-color: $gray-lighter !default;
-$blockquote-border-width: .25rem !default;
-
-$hr-border-color: rgba($black,.1) !default;
-$hr-border-width: $border-width !default;
-
-$mark-padding: .2em !default;
-
-$dt-font-weight: $font-weight-bold !default;
-
-$kbd-box-shadow:         inset 0 -.1rem 0 rgba($black,.25) !default;
-$nested-kbd-font-weight: $font-weight-bold !default;
-
-$list-inline-padding: 5px !default;
 
 
 // Components
@@ -369,7 +272,7 @@ $transition-collapse:    height .35s ease !default;
 
 // Buttons
 //
-// For each of Bootstrap's buttons, define text, background and border color.
+// For each of  buttons, define text, background and border color.
 
 $btn-padding-x:                  7px !default;
 $btn-padding-y:                  6px !default;
@@ -387,9 +290,6 @@ $btn-secondary-color:            $gray-dark !default;
 $btn-secondary-bg:               $white !default;
 $btn-secondary-border:           #ccc !default;
 
-$btn-info-color:                 $white !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                $btn-info-bg !default;
 
 $btn-success-color:              $white !default;
 $btn-success-bg:                 $brand-success !default;
@@ -483,7 +383,7 @@ $custom-control-indicator-size:       1rem !default;
 $custom-control-indicator-margin-y:   (($line-height-base * 1rem) - $custom-control-indicator-size) / -2 !default;
 $custom-control-indicator-bg:         #ddd !default;
 $custom-select-indicator-color: #333 !default;
-$custom-select-indicator:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$custom-select-indicator:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 
 
@@ -560,22 +460,14 @@ $modal-transition:            transform .3s ease-out !default;
 
 
 
-// pagination
 
 
 // Pagination
 
-//$pagination-padding-x:                .75rem !default;
-//$pagination-padding-y:                .5rem !default;
 
 $pagination-padding-x:                0.4rem !default;
 $pagination-padding-y:                0 !default;
 
-
-//$pagination-padding-x-sm:             .5rem !default;
-//$pagination-padding-y-sm:             .25rem !default;
-//$pagination-padding-x-lg:             1.5rem !default;
-//$pagination-padding-y-lg:             .75rem !default;
 
 $pagination-line-height:              1.25 !default;
 
@@ -585,16 +477,9 @@ $pagination-border-width:              $border-width !default;
 $pagination-border-color:              #ddd !default;
 
 $pagination-hover-color:               $gray-dark !default;
-//$pagination-hover-bg:                  $gray-lighter !default;
-//$pagination-hover-border:              #ddd !default;
-
 $pagination-active-color:              $black !default;
-//$pagination-active-bg:                 $brand-primary !default;
-//$pagination-active-border:             $brand-primary !default;
-
 $pagination-disabled-color:            $gray-dark !default;
-//$pagination-disabled-bg:               $white !default;
-//$pagination-disabled-border:           #ddd !default;
+
 
 
 
