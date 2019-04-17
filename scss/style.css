@@ -428,17 +428,7 @@ input[type="button"].btn-block {
   display: flex;
   align-items: center;
   position: relative;
-  /*  &::after {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      vertical-align: middle;
-      content: "";
-      border-top: $caret-width solid;
-      border-right: $caret-width solid transparent;
-      border-left: $caret-width solid transparent;
-      margin-left: 8px;
-    }*/ }
+  }
   .dropdown-toggle.btn, .dropdown-toggle.btn-link {
     font-size: 0.85rem;
     line-height: 1.2; }
