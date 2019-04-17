@@ -1,0 +1,42 @@
+/* Elite Product Styling */
+
+@import 'partials/variables';
+@import 'partials/alignment';
+@import 'partials/tables';
+
+//mixins
+
+@import 'mixins/mixins';
+
+
+//partials
+
+@import 'partials/type';
+@import 'partials/buttons';
+@import 'partials/dropdown';
+@import 'partials/forms';
+@import 'partials/search';
+@import 'partials/custom';
+@import 'partials/tags';
+@import 'partials/modal';
+
+// plugins
+
+@import "./plugins/ico_moon";
+
+
+// cards
+
+@import "partials/cards";
+
+
+// pagination
+@import 'partials/pagination';
+
+
+// Layout
+
+@import "Layout/layout";
+
+
+

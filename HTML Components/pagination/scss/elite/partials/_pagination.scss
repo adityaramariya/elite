@@ -1,0 +1,60 @@
+.pagination {
+  display: flex;
+  padding-left: 0; // 1
+  list-style: none; // 2
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+
+    }
+  }
+  &:last-child {
+    .page-link {
+    }
+  }
+
+  &:first-child, &:last-child
+  {
+    .page-link
+    {
+      color: $pagination-active-color;
+      .icon-arrow_right, .icon-arrow_left
+      {
+        line-height: inherit;
+      }
+    }
+  }
+
+  &.active .page-link {
+    color: $pagination-active-color;
+  }
+
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    cursor: $cursor-disabled; // While `pointer-events: none` removes the cursor in modern browsers, we provide a disabled cursor as a fallback.
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $font-size-base;
+  padding: $pagination-padding-y $pagination-padding-x;
+  //margin-left: -1px;
+  line-height: $pagination-line-height;
+  //color: $pagination-color;
+  @include hover-focus {
+    color: $pagination-hover-color;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,48 @@
+//
+// Links
+//
+
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+
+.sectionTitle
+{
+
+}
+
+.pageTitle
+{
+  font-size: 1.5rem;
+  margin-bottom: $spacer;
+}
+
+.sectionHeader
+{
+  font-weight: $font-weight-bold;
+}
+
+small.badge
+{
+  font-weight: $font-weight-normal;
+  font-style: italic;
+  color: rgba($white, 0.8);
+  background-color: $orange;
+  padding: 2px 5px;
+  font-size: 0.7rem;
+}
+
